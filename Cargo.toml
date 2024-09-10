@@ -1,0 +1,9 @@
+[package]
+name = "noir_recursion_pattern"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+noir_rs = { git = "https://github.com/michaelelliot/noir_rs.git", branch = "v0.32.0", package = "noir_rs" }
+acir = { git = "https://github.com/noir-lang/noir.git", tag = "v0.32.0", package = "acir" }
+serde_json = "1.0.125"

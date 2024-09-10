@@ -1,0 +1,6 @@
+[package]
+name = "inner2"
+type = "bin"
+compiler_version = ">=0.32.0"
+
+[dependencies]

@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "circuits/inner1",
+    "circuits/inner2",
+    "circuits/outer"
+]
