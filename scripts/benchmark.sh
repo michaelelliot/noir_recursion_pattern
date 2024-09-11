@@ -14,9 +14,13 @@ run_benchmark() {
   # Output the results
   echo "Peak memory: $PEAK_MEM"
   echo "Proving time: $SECS_ELAPSED secs"
-  echo
 }
 
-run_benchmark "test_honk_inner1"
-run_benchmark "test_honk_inner2"
-run_benchmark "test_honk_outer"
+get_circuit_size() {
+  CIRCUIT_SIZE=$(bb gates -b ./target/$1.json -- -h | jq '.functions[0].circuit_size')
+  echo "Circuit size: $CIRCUIT_SIZE gates"
+}
+
+run_benchmark test_honk_inner1; get_circuit_size inner1; echo
+run_benchmark test_honk_inner2; get_circuit_size inner2; echo
+run_benchmark test_honk_outer; get_circuit_size outer; echo
