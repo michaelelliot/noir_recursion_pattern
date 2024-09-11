@@ -7,8 +7,15 @@
 ./scripts/prove-honk.sh outer
 ```
 
-## Update LOCAL_SRS
-Update `const LOCAL_SRS: &str = "transcript00.dat"` in `src/main.rs` to point to a local copy of [transcript00.dat](https://aztec-ignition.s3.eu-west-2.amazonaws.com/MAIN+IGNITION/sealed/transcript00.dat).
+## Get transcript
+
+### Download it automatically
+```sh
+./scripts/download_transcript.sh
+```
+
+### Or update LOCAL_SRS
+Update `const LOCAL_SRS: &str = ".cache/transcript00.dat"` in `src/main.rs` to point to a local copy of [transcript00.dat](https://aztec-ignition.s3.eu-west-2.amazonaws.com/MAIN+IGNITION/sealed/transcript00.dat).
 
 ## Run tests
 ```sh

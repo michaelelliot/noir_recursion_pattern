@@ -4,7 +4,7 @@ use noir_rs::{prove::prove_honk, srs::setup_srs, utils::decode_circuit, verify::
 use acir::FieldElement;
 use acir::native_types::{Witness, WitnessMap};
 
-const LOCAL_SRS: &str = "transcript00.dat";
+const LOCAL_SRS: &str = ".cache/transcript00.dat";
 
 const INNER_X_ARG: u128 = 1234;
 const INNER_1_OUT_ARG: &str = "0x12a62eebe17a2a4852ebcb89fbcba38e5bd980e95f579b68405090352babc73c";
