@@ -14,3 +14,16 @@ Update `const LOCAL_SRS: &str = "transcript00.dat"` in `src/main.rs` to point to
 ```sh
 cargo test -- --test-threads=1
 ```
+
+## Benchmarks
+
+| Test Name         | Peak Memory (MB) | Proving Time (secs) |
+|-------------------|------------------|---------------------|
+| test_honk_inner1  | 660              | 0.84                |
+| test_honk_inner2  | 570              | 0.73                |
+| test_honk_outer   | 6904             | 21                  |
+
+### Run benchmarks
+```sh
+./scripts/benchmark.sh
+```
