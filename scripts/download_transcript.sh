@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
 
 TRANSCRIPT_FILE=".cache/transcript00.dat"
-TRANSCRIPT_URL="https://aztec-ignition.s3.eu-west-2.amazonaws.com/MAIN+IGNITION/sealed/transcript00.dat"
-EXPECTED_SIZE=322560348
+TRANSCRIPT_URL="https://aztec-ignition.s3.eu-west-2.amazonaws.com/MAIN+IGNITION/monomial/transcript00.dat"
+EXPECTED_SIZE=322560412
 
 # Check if the file exists and its size matches the expected size
 if [ -f "$TRANSCRIPT_FILE" ]; then
