@@ -73,7 +73,7 @@ fn test_honk_inner2() {
 
 
 #[test]
-fn test_honk_recursive_proving() {
+fn test_honk_outer() {
     // Read the JSON manifest of the circuit
     let recursed_circuit_txt = fs::read_to_string("./target/inner2.json").unwrap();
     // Parse the JSON manifest into a dictionary
@@ -100,7 +100,6 @@ fn test_honk_recursive_proving() {
     assert_eq!(vk_as_fields.len(), 103);
 
     // Read the JSON manifest of the circuit
-    // let recursive_circuit_txt = fs::read_to_string("../../circuits/target/outer.json").unwrap();
     let recursive_circuit_txt = fs::read_to_string("./target/outer.json").unwrap();
     // Parse the JSON manifest into a dictionary
     let recursive_circuit: serde_json::Value = serde_json::from_str(&recursive_circuit_txt).unwrap();
